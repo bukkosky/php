@@ -1,25 +1,34 @@
 <?php 
 
-	// class dbData {
+	abstract class FileData {
 
-	// 	var $file = implode('', file('csv_test.csv'));
+		public $file;
+		public $entity;
+		public $data;
 
-	// 	function load() {
-	// 		return $this->$file;
-	// 	}
+		public function load() {
+			return $this->$file;
+		}
 		
-	// 	function update() {
-
-	// 	}	
+		public function update() {
+			file_put_contents($file, $this->$data)
+		}	
 		
-	// 	function _construct() {
+		public function _construct() {
 
-	// 	}	
+		}	
+		public function getMode() {
+			return $this->$data;
+		}
 
-	// }
+		public function setMode($file){
+			$this->data = $data;
+		}
+	}
 
-	var $file = file('csv_test.csv');
+	$user = new FileData();
 
-	echo $file;
+
+
 
  ?>

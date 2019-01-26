@@ -1,3 +1,4 @@
 .idea
 VENDOR
 COMPOSER.LOCK
+/nbproject/private/

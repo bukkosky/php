@@ -1,12 +1,20 @@
 <?php 
 
-	session_start()
+    define('STORAGE', 'csv_test.csv');
 
-	$file = 'sess.txt';	
+    if(file_exists(STORAGE)){
+        $data = file(STORAGE);
 
-	$sess2 = session_decode($file);
+        foreach($data as $val){
 
-	var_dump($_SESSION)
-
+            $item = explode(",", $val);
+            echo "<p>";
+         //   echo $val;
+            echo $item[0] ." " .  $item[1] . " " . $item[2] . " "  . $item[3];
+            echo "<p>";
+        }
+    }else {
+        echo "File does not exist";
+    }
 
  ?>
