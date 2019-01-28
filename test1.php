@@ -2,15 +2,30 @@
 
 	session_start();
 
-	$_SESSION["imie"] = "Jan";
-	$_SESSION["nazwisko"] = "Kowalski";
-	$_SESSION["wiek"] = 31;
 
-	echo session_encode();
+	$_SESSION["name"] = $_POST["name"];
+	$_SESSION["password"] = $_POST["password"];
 
-	$sess = session_encode()
+	file_put_contents('user.txt', session_encode());
 
-	$file1 = "sess.txt";
 
-	file_put_contents($file1, $sess);
+
+//	if(file_exists('user.txt')){
+//	    session_decode(file_get_contents('user.txt'))
+//    }
+
+	var_dump($_SESSION);
+
+    header('Location: test2.php');
+//	$_SESSION["imie"] = "Jan";
+//	$_SESSION["nazwisko"] = "Kowalski";
+//	$_SESSION["wiek"] = 31;
+
+
+
+
+//    file_put_contents('user.txt', session_encode());
+
+
+
  ?>
