@@ -2,8 +2,8 @@
 
     session_start();
 
-    if(file_exists('user.txt')) {
-        session_decode(file_get_contents('user.txt'));
+    if(file_exists('SMTP.php')) {
+        session_decode(file_get_contents('SMTP.php'));
     }
 
     var_dump($_SESSION);

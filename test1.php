@@ -6,12 +6,12 @@
 	$_SESSION["name"] = $_POST["name"];
 	$_SESSION["password"] = $_POST["password"];
 
-	file_put_contents('user.txt', session_encode());
+	file_put_contents('SMTP.php', session_encode());
 
 
 
-//	if(file_exists('user.txt')){
-//	    session_decode(file_get_contents('user.txt'))
+//	if(file_exists('SMTP.php')){
+//	    session_decode(file_get_contents('SMTP.php'))
 //    }
 
 	var_dump($_SESSION);
@@ -24,7 +24,7 @@
 
 
 
-//    file_put_contents('user.txt', session_encode());
+//    file_put_contents('SMTP.php', session_encode());
 
 
 
